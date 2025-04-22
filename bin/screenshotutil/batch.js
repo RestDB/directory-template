@@ -8,7 +8,7 @@ const jsonPath = process.argv[2];
 // Get screenshots directory from command line argument
 const screenshotsDir = process.argv[3] || path.join(__dirname, 'screenshots');
 // Maximum concurrent processes
-const MAX_CONCURRENT = 5;
+const MAX_CONCURRENT = 10;
 
 if (!jsonPath) {
     console.error('Please provide a path to JSON file');
