@@ -10,6 +10,7 @@ const idx = lunr(function () {
     this.ref('_id')
     this.field('title')
     this.field('content')
+    this.field('ingress')
     this.field('category')
     this.field('siteUrl')    
     this.field('companyName')
@@ -30,6 +31,7 @@ const idx = lunr(function () {
             categorySlug: doc.categorySlug,
             slug: doc.slug,
             companyName: doc.companyName,
+            ingress: doc.ingress,
             details: doc.details
         }
     }, this)
