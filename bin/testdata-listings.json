@@ -16,7 +16,7 @@
             { "label": "Style", "value": "Contemporary" },
             { "label": "Category", "value": "Living Room" },
             { "label": "Warranty", "value": "5 Years" },
-            { "label": "Features", "value": "Reclining, USB Ports, Cup Holders" },
+            { "label": "Features", "value": "Power Reclining, Dual USB Charging Ports, Hidden Storage Console" },
             { "label": "Colors", "value": "Black, Brown, Tan" },
             { "label": "Website", "value": "https://example.com/furniture/sofa" }
         ],
@@ -41,7 +41,7 @@
             { "label": "Style", "value": "Modern" },
             { "label": "Category", "value": "Office" },
             { "label": "Warranty", "value": "3 Years" },
-            { "label": "Features", "value": "Adjustable Height, Lumbar Support" },
+            { "label": "Features", "value": "Adjustable Height, Lumbar Support, Tilt Tension, 360° Swivel" },
             { "label": "Colors", "value": "Black, Gray" },
             { "label": "Website", "value": "https://example.com/furniture/office-chair" }
         ],
@@ -66,7 +66,7 @@
             { "label": "Size", "value": "Queen" },
             { "label": "Category", "value": "Bedroom" },
             { "label": "Warranty", "value": "2 Years" },
-            { "label": "Features", "value": "Under-bed Storage, LED Lighting" },
+            { "label": "Features", "value": "4 Under-bed Storage Drawers, Dimmable LED Lighting, Upholstered Headboard" },
             { "label": "Colors", "value": "Walnut, Oak, White" },
             { "label": "Website", "value": "https://example.com/furniture/platform-bed" }
         ],
@@ -91,7 +91,7 @@
             { "label": "Style", "value": "Contemporary" },
             { "label": "Category", "value": "Dining Room" },
             { "label": "Warranty", "value": "5 Years" },
-            { "label": "Features", "value": "Expandable, Self-storing Leaf" },
+            { "label": "Features", "value": "Butterfly Extension Leaf, Self-storing Mechanism, Seats 6-10 People" },
             { "label": "Finish", "value": "Natural Oak, Dark Walnut" },
             { "label": "Website", "value": "https://example.com/furniture/dining-table" }
         ],
@@ -116,7 +116,7 @@
             { "label": "Style", "value": "Modern" },
             { "label": "Category", "value": "Storage" },
             { "label": "Warranty", "value": "1 Year" },
-            { "label": "Features", "value": "Modular, Wall-mounted Options" },
+            { "label": "Features", "value": "Stackable Cubes, Wall-mounting Hardware, Adjustable Shelving" },
             { "label": "Colors", "value": "White, Black, Oak" },
             { "label": "Website", "value": "https://example.com/furniture/storage" }
         ],
@@ -141,7 +141,7 @@
             { "label": "Style", "value": "Modern" },
             { "label": "Category", "value": "Living Room" },
             { "label": "Warranty", "value": "3 Years" },
-            { "label": "Features", "value": "USB Charging, Heat, Massage" },
+            { "label": "Features", "value": "Dual USB Charging, 3 Heat Settings, 8 Massage Modes, Voice Control" },
             { "label": "Colors", "value": "Charcoal, Navy, Beige" },
             { "label": "Website", "value": "https://example.com/furniture/recliner" }
         ],
@@ -166,7 +166,7 @@
             { "label": "Style", "value": "Modern" },
             { "label": "Category", "value": "Office" },
             { "label": "Warranty", "value": "5 Years" },
-            { "label": "Features", "value": "Electric Height Adjust, Memory Settings" },
+            { "label": "Features", "value": "Electric Height Adjustment, 4 Memory Settings, Cable Management System" },
             { "label": "Colors", "value": "Natural Bamboo, White, Black" },
             { "label": "Website", "value": "https://example.com/furniture/standing-desk" }
         ],
@@ -191,7 +191,7 @@
             { "label": "Style", "value": "Contemporary" },
             { "label": "Category", "value": "Living Room" },
             { "label": "Warranty", "value": "Lifetime" },
-            { "label": "Features", "value": "Modular Design, Removable Covers" },
+            { "label": "Features", "value": "Modular Design, Machine-washable Covers, Reversible Chaise" },
             { "label": "Colors", "value": "Gray, Blue, Cream" },
             { "label": "Website", "value": "https://example.com/furniture/sectional" }
         ],
@@ -216,7 +216,7 @@
             { "label": "Style", "value": "Transitional" },
             { "label": "Category", "value": "Living Room" },
             { "label": "Warranty", "value": "1 Year" },
-            { "label": "Features", "value": "Storage, Reversible Tray Top" },
+            { "label": "Features", "value": "Gas Lift Storage, Reversible Serving Tray, Safety Hinges" },
             { "label": "Colors", "value": "Beige, Gray, Navy" },
             { "label": "Website", "value": "https://example.com/furniture/ottoman" }
         ],
@@ -242,7 +242,7 @@
             { "label": "Size", "value": "Twin/Full" },
             { "label": "Category", "value": "Bedroom" },
             { "label": "Warranty", "value": "2 Years" },
-            { "label": "Features", "value": "Integrated Desk, Ladder, Guard Rails" },
+            { "label": "Features", "value": "Full-size Desk, Built-in Bookshelf, Safety Guard Rails, Easy-access Ladder" },
             { "label": "Colors", "value": "Silver, Black, White" },
             { "label": "Website", "value": "https://example.com/furniture/bunk-bed" }
         ],

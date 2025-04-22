@@ -4,7 +4,7 @@
     <div class="hero-content text-center">
         <div class="max-w-[800px] mx-auto">
             <h1 class="text-5xl font-bold">{{listing.title}}</h1>
-            {{#unless (eq listing.companyName listing.title)}}
+            {{#unless (eq listing.companyName listing.title ignoreCase=true)}}
             <p class="py-6 text-xl text-base-content/70">by {{listing.companyName}}</p>
             {{/unless}}
             <div class="card bg-base-100 w-full lg:max-w-[740px] lg:mx-0 mt-4">
@@ -19,7 +19,7 @@
                     </div>
                     {{/if}}
                     {{#if listing.content}}
-                    <div class="prose max-w-none">
+                    <div class="prose text-lg max-w-none">
                         {{{listing.content}}}
                     </div>
                     {{/if}}

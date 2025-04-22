@@ -1,0 +1,70 @@
+{
+    "corrections": [
+        {
+            "id": "67f516bcb9b1f166afc6c2ce",
+            "name": "GPT-40",
+            "type": "Language Model API",
+            "features": ["Natural Language Processing", "Text Generation", "Code Generation"]
+        },
+        {
+            "id": "67f516bcb9b1f166afc6c2cf",
+            "name": "DALL-E",
+            "type": "Image Generation API",
+            "features": ["Image Generation", "Text-to-Image", "Image Editing"]
+        },
+        {
+            "id": "67f516bcb9b1f166afc6c2d0",
+            "name": "Whisper",
+            "type": "Speech Recognition API",
+            "features": ["Speech-to-Text", "Audio Transcription", "Multi-language Support"]
+        },
+        {
+            "id": "67f516bcb9b1f166afc6c2d1",
+            "name": "Gemini",
+            "type": "Language Model API",
+            "features": ["Natural Language Processing", "Text Generation", "Multi-modal Processing"]
+        },
+        {
+            "id": "67f516bcb9b1f166afc6c2d3",
+            "name": "Cloud Vision API",
+            "type": "Computer Vision API",
+            "features": ["Image Recognition", "Object Detection", "OCR", "Face Detection"]
+        },
+        {
+            "id": "67f516bcb9b1f166afc6c2d4",
+            "name": "Claude",
+            "type": "Language Model API",
+            "features": ["Natural Language Processing", "Text Generation", "Analysis"]
+        },
+        {
+            "id": "67f516bcb9b1f166afc6c2d5",
+            "name": "Claude Instant",
+            "type": "Language Model API",
+            "features": ["Natural Language Processing", "Text Generation", "Fast Processing"]
+        },
+        {
+            "id": "67f516bcb9b1f166afc6c2d6",
+            "name": "Llama 2",
+            "type": "Language Model",
+            "features": ["Natural Language Processing", "Text Generation", "Open Source"]
+        },
+        {
+            "id": "67f516bcb9b1f166afc6c2d7",
+            "name": "AudioCraft",
+            "type": "Audio Generation API",
+            "features": ["Audio Generation", "Music Generation", "Sound Effects"]
+        },
+        {
+            "id": "67f516bcb9b1f166afc6c2d8",
+            "name": "Code Llama",
+            "type": "Code Generation Model",
+            "features": ["Code Generation", "Code Completion", "Programming Languages Support"]
+        },
+        {
+            "id": "67f516bcb9b1f166afc6c2d9",
+            "name": "Grok",
+            "type": "Language Model API",
+            "features": ["Natural Language Processing", "Text Generation", "Real-time Data Access"]
+        }
+    ]
+} 

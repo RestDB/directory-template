@@ -121,7 +121,7 @@ async function writeSitemapToResponse(res, host) {
     // Add all directory entries
     await listings.forEach((listing) => {
         res.write(`  <url>
-    <loc>${sitename}/${listing.categorySlug}/${listing.slug}/${listing._id}</loc>
+    <loc>${sitename}/listing/${listing.categorySlug}/${listing.slug}</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>\n`);
@@ -144,7 +144,14 @@ handlebars.registerHelper('bannerAd', function(options) {
 });
 
 // Register the equals Handlebarshelper
-handlebars.registerHelper('eq', function(a, b) {
+handlebars.registerHelper('eq', function(a, b, options) {
+    // Get the optional ignoreCase parameter, defaults to false
+    const ignoreCase = options.hash.ignoreCase || false;
+    
+    if (ignoreCase && typeof a === 'string' && typeof b === 'string') {
+        return a.toLowerCase() === b.toLowerCase();
+    }
+    
     return a === b;
 });
 

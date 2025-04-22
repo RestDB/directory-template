@@ -29,7 +29,8 @@ const idx = lunr(function () {
             category: doc.category,
             categorySlug: doc.categorySlug,
             slug: doc.slug,
-            companyName: doc.companyName
+            companyName: doc.companyName,
+            details: doc.details
         }
     }, this)
 })

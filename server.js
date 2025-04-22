@@ -81,34 +81,6 @@ app.get('/sitemap.xml', async (req, res) => {
     await writeSitemapToResponse(res, req.headers.host);
 });
 
-// create screenshot of a url
-app.post('/screenshot', async (req, res) => {
-    const db = await Datastore.open();
-    const siteUrl = req.body.siteUrl;
-    console.log('worker to create screenshot of a url', siteUrl);
-    try {        
-        // use fetch to get the screenshot from a url
-        const response = await fetch(`https://sea-lion-app-5qcgn.ondigitalocean.app/screenshot?url=${siteUrl}`, {
-            headers: {
-                'User-Agent': 'Mozilla/5.0 (compatible; FoolstoolsBot/1.0; +https://foolstools.com)'
-            }
-        });
-        const buf = await response.buffer();
-        console.log('screenshot buffer length:', buf.length, 'bytes', response.status, response.statusText);
-        if (response.status > 201) {
-            console.error('error', buf.toString('utf-8'));
-            res.status(response.status).end(response.statusText);
-        } else {
-            const result = await filestore.saveFile(`/screenshots/${siteUrl}`, buf);
-            console.log('screenshot saved', result);
-            //await db.updateOne('listings', {_id: listing._id}, {$set: {screenshotWorking: false, screenshot: result.id }});
-            res.end();    
-        }
-    } catch (error) {
-        console.error('error', error);
-        job.end();
-    }
-});
 
 // serve a screenshot of a url
 app.get('/screenshot', async (req, res) => {
@@ -145,7 +117,7 @@ app.get('/screenshot', async (req, res) => {
                     fill="#666"
                     text-anchor="middle" 
                     dominant-baseline="middle">
-                    Missing screenshot
+                    ║  No screenshot available   ║ 
                 </text>
             </svg>
         `);
