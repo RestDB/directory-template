@@ -163,7 +163,7 @@ app.get('/listing/:categorySlug/:slug', async (req, res) => {
         const directories = await loadDirectoriesCached();
         console.log('loadListingByIdCached', slug, directories.length);
         const listing = await loadListingById(slug);
-        res.send(await renderPage('listing', {listing, directories, keywords: listing.seoKeywords, title: settings.title, cacheBreaker}));
+        res.send(await renderPage('listing', {listing, directories, category: categorySlug, keywords: listing.seoKeywords, title: settings.title, cacheBreaker}));
     } catch (error) {
         console.error(`Error loading listing ${slug}:`, error.message);
         res.status(404).send('Listing not found'+encodeURIComponent(slug));
