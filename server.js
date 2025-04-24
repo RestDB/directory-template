@@ -41,7 +41,7 @@ const templates = {
     bigbrands: handlebars.compile(bigbrands)
 }
 
-const bigBrandsArray = ['Oracle', 'Microsoft', 'OpenAI', 'Meta', 'Ibm', 'Google', 'GitHub', 'Amazon', 'Cloudflare'];
+const bigBrandsArray = settings.brands;
 
 // Render the page
 const renderPage = async (page, data) => {
