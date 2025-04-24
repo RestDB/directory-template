@@ -25,21 +25,22 @@ coho init --empty
 npm run mock
 ```
 
-This command initializes your directory service with sample data from `bin/testdata-listings.json`. The mock data includes:
+This command initializes your directory service with sample data from `bin/testdata-sneakers.json`. The mock data includes:
 
-- Furniture listings with detailed product information
-- Categories like Living Room, Office, Bedroom, and Dining Room
+- Sneaker listings with detailed product information
+- Categories like Nike, Adidas, Reebok, Puma, and Converse
 - SEO-optimized content with keywords and descriptions
 - Rich metadata including images, features, and specifications
 - Hierarchical organization with categories and directories
 
 Each listing contains:
 - Title and SEO-friendly slug
-- Category and directory classification
-- Detailed product specifications
-- Featured status indicators
-- High-quality product descriptions
+- Category and directory classification (e.g., basketball, lifestyle, running)
+- Detailed product specifications (materials, sole type, cushioning, etc.)
+- Featured status indicators (topFeature, categoryFeature)
+- High-quality product descriptions and ingress text
 - Image URLs and website links
+- Company name and brand information
 
 The mock data creates a fully functional directory service, perfect for testing and development before adding your own content.
 
@@ -133,6 +134,32 @@ module.exports = {
   Custom styled content
 </div>
 ```
+
+## NPM commands in package.json
+
+The project includes several useful NPM commands for development and deployment:
+
+### Development Commands
+- `npm run clean` - Cleans the database by dropping the 'listings' collection and clearing the cache
+- `npm run mock` - Initializes the database with sample sneaker data from `bin/testdata-sneakers.json`
+- `npm run css` - Generates CSS files using Tailwind CSS
+- `npm run bundle` - Bundles and minifies client-side JavaScript using esbuild
+- `npm run clearcache` - Clears the Codehooks.io cache
+
+### Build Commands
+- `npm run build` - Creates the build directory, generates CSS, and builds the search index
+- `npm run buildindex` - Generates the search index from the database listings
+- `npm run buildsitemap` - Generates the sitemap for the website
+
+### Screenshot Commands
+- `npm run screenshot` - Creates screenshots of all listings and saves them to `~/tmp/screenshots`
+- `npm run uploadscreenshots` - Uploads the generated screenshots to Codehooks.io blob storage
+
+### Deployment Commands
+- `npm run deploy` - Builds the project, bundles JavaScript, clears cache, and deploys to Codehooks.io
+
+### Setup Commands
+- `npm run setup` - Cleans the database, creates the listings collection, and imports data from `build/output.json`
 
 ## Learn More
 

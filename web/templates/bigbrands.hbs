@@ -1,0 +1,48 @@
+{{#extend "layout"}}
+{{#content "main"}}
+<div class="my-8 p-5 font-sans w-full max-w-[350px] mx-auto">
+    {{bannerAd
+    link="https://codehooks.io"
+    image="https://codehooks.io/img/logo.svg"
+    title="Codehooks.io"
+    text="Super-simple backend storage for your next project."
+    linkText="Read more »"
+    }}
+</div>
+<div class="card bg-base-100 shadow-lg">
+    <div class="card-body p-4">
+        <h1 class="card-title text-2xl mb-4">Brands</h1>
+
+        <div class="flex flex-col gap-4">
+            {{#each bigBrands}}
+            <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                <input type="checkbox" />
+                <div class="collapse-title text-lg font-semibold">
+                    {{this.name}} <div class="badge badge-info">{{this.products.length}}</div>
+                </div>
+                <div class="collapse-content">
+                    <div class="flex flex-col gap-4">
+                        {{#each this.products}}
+                        <a href="/listing/{{categorySlug}}/{{slug}}"
+                            class="flex items-center gap-4 p-4 bg-base-200 rounded-lg hover:bg-base-300 transition-colors cursor-pointer">
+                            <div class="avatar">
+                                <div class="w-16 h-16 rounded">
+                                    <img src="{{#if altImageUrl}}{{altImageUrl}}?cachebrk={{../cacheBreaker}}{{else}}/screenshot?url={{siteUrl}}&cachebrk={{../cacheBreaker}}{{/if}}"
+                                        alt="{{title}}" />
+                                </div>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h2 class="text-lg font-semibold truncate">{{this.title}}</h2>
+                                <p class="text-sm opacity-70 line-clamp-2">{{this.content}}</p>
+                            </div>
+                        </a>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+{{/content}}
+{{/extend}}

@@ -6,6 +6,7 @@ console.log('prebuiltIndex',prebuiltIndex);
 
 const idx = lunr.Index.load(prebuiltIndex);
 const searchResults = document.getElementById('search-results');
+const MAX_RESULTS = 30;
 let results = [];
 
 window.handleSearch = function(query) {
@@ -22,7 +23,7 @@ window.handleSearch = function(query) {
             searchResults.innerHTML = '<div class="p-4 text-sm opacity-50">No results found</div>';
         } else {
             const totalResults = results.length;
-            const displayedResults = results.slice(0, 10);
+            const displayedResults = results.slice(0, MAX_RESULTS);
             
             searchResults.innerHTML = displayedResults
                 .map(result => `
@@ -46,9 +47,9 @@ window.handleSearch = function(query) {
                         </a>
                     </li>
                 `).join('') + 
-                (totalResults > 10 ? `
+                (totalResults > MAX_RESULTS ? `
                     <li class="mt-2 border-t border-base-300">                        
-                      <div class="font-medium text-accent">More than ${totalResults} results, narrow your search</div>                        
+                      <div class="font-medium text-accent">Excluded ${totalResults - MAX_RESULTS} results, narrow your search</div>                        
                     </li>
                 ` : '');
         }

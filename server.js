@@ -15,6 +15,7 @@ import all from './web/templates/all.hbs';
 import category from './web/templates/category.hbs';
 import listing from './web/templates/listing.hbs';  
 import layout from './web/templates/layout.hbs';
+import bigbrands from './web/templates/bigbrands.hbs';
 import { 
     loadDirectoriesCached, 
     loadTopFeaturesCached, 
@@ -22,7 +23,8 @@ import {
     loadCategoryFeaturesCached,
     loadListingById,
     writeSitemapToResponse,
-    setCacheHeaders
+    setCacheHeaders,
+    loadBigBrandsCached
 } from './helpers.js';
 import settings from './settings.js';
 
@@ -35,9 +37,11 @@ const templates = {
     all: handlebars.compile(all),
     category: handlebars.compile(category),
     listing: handlebars.compile(listing),
-    layout: handlebars.compile(layout)
+    layout: handlebars.compile(layout),
+    bigbrands: handlebars.compile(bigbrands)
 }
 
+const bigBrandsArray = ['Oracle', 'Microsoft', 'OpenAI', 'Meta', 'Ibm', 'Google', 'GitHub', 'Amazon', 'Cloudflare'];
 
 // Render the page
 const renderPage = async (page, data) => {
@@ -139,6 +143,15 @@ app.get('/about', async (req, res) => {
     console.log('about');
     const directories = await loadDirectoriesCached();
     res.send(await renderPage('about', {directories, title: settings.title, cacheBreaker}));
+});
+
+// load bigbrands
+// Oracle, Microsoft, OpenAI, Meta, Ibm, Google, GitHub, Amazon, Cloudflare
+app.get('/bigbrands', async (req, res) => {
+    const directories = await loadDirectoriesCached();
+    const bigBrands = await loadBigBrandsCached(bigBrandsArray);
+    console.log('bigBrands', bigBrands);    
+    res.send(await renderPage('bigbrands', {directories, bigBrands, title: settings.title, cacheBreaker}));
 });
 
 // load all categories

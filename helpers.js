@@ -86,13 +86,29 @@ async function loadAllCategories() {
     }, {});
 }
 
+async function loadBigBrands(brandsArray) {
+    const db = await Datastore.open();
+    const result = await db.getMany('listings', {companyName: {$in: brandsArray}}).toArray();
+    // group by companyName
+    return result.reduce((acc, item) => {
+        if (!acc[item.companyName]) {
+            acc[item.companyName] = {
+                name: item.companyName,
+                products: []
+            };
+        }
+        acc[item.companyName].products.push(item);
+        return acc;
+    }, {});
+}
+
 // Cached versions
 const loadDirectoriesCached = () => getCached('directories', loadDirectories);
 const loadTopFeaturesCached = () => getCached('topFeatures', loadTopFeatures);
 const loadAllCategoriesCached = () => getCached('allCategories', loadAllCategories);
 const loadCategoryFeaturesCached = (slug) => getCached(`categoryFeatures-${slug}`, () => loadCategoryFeatures(slug));
 const loadListingByIdCached = (slug) => getCached(`listing-${slug}`, () => loadListingById(slug));
-
+const loadBigBrandsCached = (brandsArray) => getCached(`bigBrands-${brandsArray.join(',')}`, () => loadBigBrands(brandsArray));
 // Generate sitemap XML directly to response
 async function writeSitemapToResponse(res, host) {
     const db = await Datastore.open();
@@ -164,4 +180,4 @@ const setCacheHeaders = (res) => {
 }
 
 // Export the new function along with existing exports
-export { setCacheHeaders, writeSitemapToResponse, loadDirectoriesCached, loadTopFeaturesCached, loadAllCategoriesCached, loadCategoryFeaturesCached, loadListingByIdCached, loadListingById }; 
+export { setCacheHeaders, writeSitemapToResponse, loadDirectoriesCached, loadTopFeaturesCached, loadAllCategoriesCached, loadCategoryFeaturesCached, loadListingByIdCached, loadListingById, loadBigBrandsCached }; 

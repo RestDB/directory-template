@@ -1,7 +1,7 @@
 const settings = {
-	"title": "Dev tools",
+	"title": "DevEssentials",
 	"ingress": `		
-		Welcome to the Dev tools directory - your curated collection of the best dev tools online.		
+		Your curated collection of essential developer tools - the must-know utilities, frameworks, and resources that every developer should have in their toolkit.		
 	`
 }
 export default settings;

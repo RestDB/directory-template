@@ -13,7 +13,8 @@
     "css": "npx @tailwindcss/cli -i ./web/css/input.css -o ./web/css/mystyles.css",
     "build": "node -e \"require('fs').mkdirSync('build', { recursive: true })\" && npm run css && npm run buildindex",
     "bundle": "esbuild ./clientscript.js --bundle --minify --outfile=./web/js/mybundle.js",
-    "deploy": "npm run build && npm run bundle && codehooks deploy -d && codehooks logs --follow"
+    "clearcache": "coho query _kvspacecache --delete",
+    "deploy": "npm run build && npm run bundle && npm run clearcache && codehooks deploy -d && codehooks logs --follow"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.0.14",
