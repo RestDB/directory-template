@@ -9,12 +9,17 @@ git clone https://github.com/RestDB/directory-template
 cd directory-template
 ```
 
-2. Install dependencies:
+2. If you don't have an account, sign up for an account at [Codehooks.io](https://account.codehooks.io/login?signup) and install the CLI:
+```bash
+npm install -g codehooks
+```
+
+3. Install dependencies:
 ```bash
 npm install
 ```
 
-3. Connect local project to your Codehooks.io project:
+4. Connect local project to your Codehooks.io project:
 ```bash
 coho init --empty
 ```
