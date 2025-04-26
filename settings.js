@@ -1,5 +1,5 @@
 const settings = {
-	"title": "DevEssentials",
+	"title": "AllToolz.dev",
 	"ingress": `		
 		Your curated collection of essential developer tools - the must-know utilities, frameworks, and resources that every developer should have in their toolkit.		
 	`,
