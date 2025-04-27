@@ -49,6 +49,11 @@ Each listing contains:
 
 The mock data creates a fully functional directory service, perfect for testing and development before adding your own content.
 
+## Example directory sites built with this template
+
+- [digihub.no](https://digihub.no)
+- [alltoolz.dev](https://alltoolz.dev)
+
 ## Deployment
 
 1. Deploy the backend to Codehooks.io:
